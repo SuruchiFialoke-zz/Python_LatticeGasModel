@@ -9,7 +9,7 @@
 
 
 # Single Flip Monte Carlo Algorithm Used
-![alt tag](https://github.com/SuruchiUpenn/Python_LatticeGasModel/blob/master/MC_algo.png)
+![alt tag](https://github.com/SuruchiUpenn/Python_LatticeGasModel/blob/master/MCAlgo.png)
 
 
 
