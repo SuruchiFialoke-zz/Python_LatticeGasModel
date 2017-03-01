@@ -133,13 +133,7 @@ def Main():
     # f_free.write("%d%-8.3f%-8.3f%-8.3f%-8.3f%-8.3f%-8.3f\n"
     # %(itern, Nwat_init, Nprobe_init, Nprobe_init,Hinit,0.0,0.0))
 
-    # Vectors and arrays storing data at all iterations
-    # rho_t = np.zeros((max_itern,NB[0],NB[1],NB[2]))
-    tt = Nwat_t = Nprobe_t = Ht = np.zeros(max_itern)
-    tt[itern] = itern
-    Nwat_t[itern] = Nwat_init
-    Nprobe_t[itern] = Nprobe_init
-    Ht[itern] = Hinit
+    
 
     # starting the iternations...............................................
     print("# Starting interations...")
@@ -147,14 +141,10 @@ def Main():
 
     while itern < max_itern-1:
         itern += 1
-        # accepts = 0.0
         rho = Sweep(rho_prev, Nprobe_prev)
-        # rho_t[itern,] = rho #need to fig binary
-        tt[itern] = itern
-        Nwat_t[itern] = Nwat = dnl*rho.sum()
-        Ht[itern] = Hnew = get_hamiltonian(rho, NB)
-        Nprobe_t[itern] = Nprobe = dnl*get_nwater_probe(rho, probe_index)
-        # Nprobe should be same as Nprobe_tmp, check
+        Nwat = dnl*rho.sum()
+        Hnew = get_hamiltonian(rho, NB)
+        Nprobe = dnl*get_nwater_probe(rho, probe_index)
 
         f_Nstar.write("%d\t%-8.3f\t%-8.3f\n" % (itern, Nprobe, Nwat))
         print(itern, Nwat, Nprobe, Hnew,
