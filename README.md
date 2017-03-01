@@ -1,10 +1,15 @@
 # Python Lattice Gas Model, along with umbrella sampling
-![alt tag](https://github.com/SuruchiUpenn/Python_LatticeGasModel/blob/master/Screen%20Shot%202017-03-01%20at%202.33.39%20PM.png)
+
+# Results in bulk water
+![alt tag](https://github.com/SuruchiUpenn/Python_LatticeGasModel/blob/master/LGresults.png)
+
+# Lattice Gas Algo Used
+![alt tag](https://github.com/SuruchiUpenn/Python_LatticeGasModel/blob/master/LG_algo.png)
 
 
 
 # Single Flip Monte Carlo Algorithm Used
-![alt tag](https://github.com/SuruchiUpenn/Python_LatticeGasModel/blob/master/Screen%20Shot%202017-03-01%20at%202.27.12%20PM.png)
+![alt tag](https://github.com/SuruchiUpenn/Python_LatticeGasModel/blob/master/MC_algo.png)
 
 
 
